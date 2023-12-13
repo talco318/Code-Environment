@@ -40,12 +40,15 @@ socketIO.on('connection', (socket) => {
 
 
     socket.on("newUser", data => {
-        const user = {
-            name: data, isTeacher: users.length === 0
-        }
-        console.log(user)
+      users.push(data)
+        console.log(data)
 
-      socketIO.emit("newUserResponse", user)
+        if (users.length === 1) {
+            console.log("He is the teacher!");
+        } else {
+            console.log("He is the student!")
+        }
+      socketIO.emit("newUserResponse", users)
     })
 
     socket.on('disconnect', () => {
