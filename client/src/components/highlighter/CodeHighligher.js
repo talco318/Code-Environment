@@ -3,7 +3,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/androidstudio.css';
 
-const CodeHighlighter = ({language = 'javascript', initialCode, value,  onChange, disabled}) => {
+const CodeHighlighter = ({language = 'javascript', initialCode, value,  onChange, disabled, disableEdit}) => {
     const codeRef = useRef(null);
     const [code, setCode] = useState(initialCode);
     const [textCode, setTextCode] = useState("");
@@ -24,7 +24,7 @@ const CodeHighlighter = ({language = 'javascript', initialCode, value,  onChange
 
     return (
         <div>
-            <textarea  value={textCode} onChange={handleCodeChange} rows={10} style={{width: '100%'}}/>
+            {!disableEdit &&    <textarea  value={textCode} onChange={handleCodeChange} rows={10} style={{width: '100%'}}/> }
             <pre>
         <code ref={codeRef} dangerouslySetInnerHTML={{__html: highlightedCode}}/>
       </pre>

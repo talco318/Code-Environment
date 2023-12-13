@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router-dom';
 import CodeHighlighter from './highlighter/CodeHighligher';
 import {getParamFromUrl} from '../utils';
 
-const CodingBody = ({messages, typingStatus, lastMessageRef, socket, users, selectedCodeId, isFirstUser}) => {
+const CodingBody = ({messages, typingStatus, lastMessageRef, socket, users, selectedCodeId}) => {
     const navigate = useNavigate();
     const currentCodeContextId = getParamFromUrl('codeId');
 
@@ -36,7 +36,7 @@ const CodingBody = ({messages, typingStatus, lastMessageRef, socket, users, sele
             </header>
 
             <div className="message__container">
-                <CodeHighlighter language="javascript" initialCode={''} value={messages} disableEdit={isFirstUser}
+                <CodeHighlighter language="javascript" initialCode={''} value={messages}
                                  onChange={(e) => sendMessage(e) }/>
                 <div className="message__status">{/* <p>{typingStatus}</p> */}</div>
                 <div ref={lastMessageRef}/>

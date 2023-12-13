@@ -31,6 +31,7 @@ const MainPage = ({socket}) => {
                 <EnvBar socket={socket} onUserAdded={onUserAdded} users={usersList} block={blockedUsers}/>
                 <div className="env__main">
                     <CodingBody
+                        isFirstUser={usersList.length === 1}
                         messages={messages}
                         typingStatus={typingStatus}
                         lastMessageRef={lastMessageRef}
