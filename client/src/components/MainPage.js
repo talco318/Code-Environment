@@ -24,17 +24,13 @@ const MainPage = ({socket}) => {
         lastMessageRef.current?.scrollIntoView({behavior: 'smooth'});
     }, [messages]);
 
-    const onUserAdded = (user) => {
-        setUsersList(user);
-        window.isFirstUser = usersList === 0;
-    }
+    const onUserAdded = (user) => setUsersList(user)
     return (
         <>
             <div className="codeBox">
                 <EnvBar socket={socket} onUserAdded={onUserAdded} users={usersList} block={blockedUsers}/>
                 <div className="env__main">
                     <CodingBody
-                        isFirstUser={window.isFirstUser}
                         messages={messages}
                         typingStatus={typingStatus}
                         lastMessageRef={lastMessageRef}
