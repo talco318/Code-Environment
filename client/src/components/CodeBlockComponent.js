@@ -30,7 +30,7 @@ const CodeBlockComponent = ({onSelectCode}) => {
         const fetchData = async () => {
             try {
                 setIsLoading(true);
-                const response = await fetch('http://localhost:4000/get-code-blocks');
+                const response = await fetch('https://codeserver-k7ch.onrender.com/get-code-blocks');
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
                 }

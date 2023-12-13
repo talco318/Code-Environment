@@ -6,7 +6,7 @@ import CodeBlockComponent from "./components/CodeBlockComponent";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const socket = socketIO.connect("http://localhost:4000")
+const socket = socketIO.connect("https://codeserver-k7ch.onrender.com")
 function App() {
   return (
     <BrowserRouter>
