@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 const EnvBar = ({socket, onUserAdded, users}) => {
     useEffect(() => {
-        socket.on('newUserResponse', (data) => onUserAdded(data.name));
+        socket.on('newUserResponse', (data) => onUserAdded(data?.users?.username));
         // Clean up the event listener when the component unmounts
         return () => {
             socket.off('newUserResponse');
