@@ -20,4 +20,4 @@ JavaScript Focus: Dedicated to JavaScript programming, providing a focused learn
 
 ## Run npm install in both folders to install all their dependencies.
 
-## Start both servers using npm start
+## Start server and client
