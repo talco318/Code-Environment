@@ -1,5 +1,8 @@
 
+<img src="https://github.com/user-attachments/assets/6e65ad26-7b15-4dc8-9f52-de0bad3a78eb" alt="Online Collaborative Coding" width="100" height="100">
+
 # Online Collaborative Coding: React Frontend for a Mentor-Mentee Experience
+
 This React application provides a virtual collaboration space for mentors and mentees to work on JavaScript code remotely. Building upon the popular Highlight.js library, it offers syntax highlighting, real-time updates, and seamless interaction between mentor and student.
 
 ## Key Features:
